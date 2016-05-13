@@ -5,7 +5,7 @@
 #include <windows.h>  // for MS Windows
 #include <gl/glew.h>
 #include <GL/glut.h>  // GLUT, include glu.h and gl.h
-
+#include <iostream>
 #include <cmath>
 #include <algorithm>
 
@@ -411,6 +411,118 @@ public:
 
 
 
+/*=================================================================
+BINARY TREE
+=================================================================*/
+
+class BinaryTreeNode
+{
+public:
+	BinaryTreeNode(){
+		data = 0;
+		left = right = 0;
+	}
+
+	void Visit(){
+		std::cout << "Visiting This: " << data << std::endl;
+	}
+
+	void Insert(int dat)
+	{
+		if (dat > data)
+		{
+			if (right)
+			{
+				right->Insert(dat);
+			}
+			else
+			{
+				right = new BinaryTreeNode();
+				right->data = dat;
+			}
+		}
+		else
+		{
+			if (left)
+			{
+				left->Insert(dat);
+			}
+			else
+			{
+				left = new BinaryTreeNode();
+				left->data = dat;
+			}
+		}
+	}
+
+	int data;
+
+	BinaryTreeNode *left;
+	BinaryTreeNode *right;
+};
+
+class SimpleBinaryTree
+{
+public:
+	SimpleBinaryTree()
+	{
+		root = 0;
+	}
+	void Insert(int data)
+	{
+		if (root)
+		{
+			root->Insert(data);
+		}
+		else
+		{
+			root = new BinaryTreeNode();
+			root->data = data;
+		}
+	}
+
+	BinaryTreeNode* TraversePreorder(BinaryTreeNode* node)
+	{
+		BinaryTreeNode *n = node;
+		n->Visit();
+		if (n->left)
+			TraversePreorder(n->left);
+		if (n->right)
+			TraversePreorder(n->right);
+
+		return n;
+	}
+
+	BinaryTreeNode* TraversePostorder(BinaryTreeNode* node)
+	{
+		BinaryTreeNode *n = node;
+
+		if (n->left)
+			TraverseInorder(n->left);
+		if (n->right)
+			TraverseInorder(n->right);
+		n->Visit();
+
+		return n;
+	}
+
+	BinaryTreeNode* TraverseInorder(BinaryTreeNode* node)
+	{
+		BinaryTreeNode *n = node;
+		if (n->left)
+			TraverseInorder(n->left);
+		n->Visit();
+		if (n->right)
+			TraverseInorder(n->right);
+
+		return n;
+	}
+
+	BinaryTreeNode *root;
+};
+
+
+
 /* modern opengl wiki books*/
 /**
 * Store all the file's contents in memory, useful to pass shaders
@@ -616,4 +728,10 @@ GLint get_uniform(GLuint program, const char *name) {
 		fprintf(stderr, "Could not bind uniform %s\n", name);
 	return uniform;
 }
+
+
+
+
+
+
 #endif

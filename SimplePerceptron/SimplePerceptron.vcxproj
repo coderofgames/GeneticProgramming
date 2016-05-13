@@ -85,6 +85,7 @@
   <ItemGroup>
     <ClInclude Include="AST.h" />
     <ClInclude Include="ExpressionTree.h" />
+    <ClInclude Include="GeneticProgramming.h" />
     <ClInclude Include="SimpleExample.h" />
     <ClInclude Include="SimpleExpressionEvaluator.h" />
     <ClInclude Include="SimpleGA.h" />

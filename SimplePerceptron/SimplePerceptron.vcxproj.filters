@@ -57,6 +57,9 @@
     <ClInclude Include="SimpleExample.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GeneticProgramming.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
