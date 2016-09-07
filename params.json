@@ -1,0 +1,6 @@
+{
+  "name": "Geneticprogramming",
+  "tagline": "Breeds computer programs based on training data (experimental working)",
+  "body": "Genetic Programming\r\n\r\nThis example successfully breeds math expressions to find the pythagoras theorem, \r\nand if you leave it running it will also find other functions that fit the sample\r\nset (these may or may not be pythagoras theorom after simplification).\r\n\r\nThe math expressions are stored in an Abstract Syntax Tree built from a simple script\r\ninterpreter that was originally written in javascript. I simply converted the script \r\ninterpreter to C++ then added the AST functionality to the Dijkstra shunting yard algorithm.\r\nI then wrote the code to compute the Genetic algorithm, to perform mutation and crossover. \r\n\r\nNote: some of the string functions were from stack overflow",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
