@@ -9,4 +9,8 @@ interpreter that was originally written in javascript. I simply converted the sc
 interpreter to C++ then added the AST functionality to the Dijkstra shunting yard algorithm.
 I then wrote the code to compute the Genetic algorithm, to perform mutation and crossover. 
 
+The genetic programming algorithm was demonstrated notably in the early 90's by Koza, 1992, 1994. 
+For more information please see the book "Artificial Intelligence, A guide to Intelligent Systems" 
+by Michael Negnevitsky. 
+
 Note: some of the string functions were from stack overflow
