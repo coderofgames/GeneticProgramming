@@ -1,12 +1,40 @@
-Genetic Programming
+========================================================================
+    CONSOLE APPLICATION : SimplePerceptron Project Overview
+========================================================================
 
-This example successfully breeds math expressions to find the pythagoras theorem, 
-and if you leave it running it will also find other functions that fit the sample
-set (these may or may not be pythagoras theorom after simplification).
+AppWizard has created this SimplePerceptron application for you.
 
-The math expressions are stored in an Abstract Syntax Tree built from a simple script
-interpreter that was originally written in javascript. I simply converted the script 
-interpreter to C++ then added the AST functionality to the Dijkstra shunting yard algorithm.
-I then wrote the code to compute the Genetic algorithm, to perform mutation and crossover. 
+This file contains a summary of what you will find in each of the files that
+make up your SimplePerceptron application.
 
-Note: some of the string functions were from stack overflow
+
+SimplePerceptron.vcxproj
+    This is the main project file for VC++ projects generated using an Application Wizard.
+    It contains information about the version of Visual C++ that generated the file, and
+    information about the platforms, configurations, and project features selected with the
+    Application Wizard.
+
+SimplePerceptron.vcxproj.filters
+    This is the filters file for VC++ projects generated using an Application Wizard. 
+    It contains information about the association between the files in your project 
+    and the filters. This association is used in the IDE to show grouping of files with
+    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
+    "Source Files" filter).
+
+SimplePerceptron.cpp
+    This is the main application source file.
+
+/////////////////////////////////////////////////////////////////////////////
+Other standard files:
+
+StdAfx.h, StdAfx.cpp
+    These files are used to build a precompiled header (PCH) file
+    named SimplePerceptron.pch and a precompiled types file named StdAfx.obj.
+
+/////////////////////////////////////////////////////////////////////////////
+Other notes:
+
+AppWizard uses "TODO:" comments to indicate parts of the source code you
+should add to or customize.
+
+/////////////////////////////////////////////////////////////////////////////
